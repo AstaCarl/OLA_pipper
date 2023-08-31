@@ -47,9 +47,9 @@ button{
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-    box-shadow: -8px 13px 25px -7px rgba(0,0,0,0.46);
-    -webkit-box-shadow: -8px 13px 25px -7px rgba(0,0,0,0.46);
-    -moz-box-shadow: -8px 13px 25px -7px rgba(0,0,0,0.46);
+    box-shadow: -7px 7px 15px -7px rgba(0,0,0,0.22);
+    -webkit-box-shadow: -7px 7px 15px -7px rgba(0,0,0,0.22);
+    -moz-box-shadow: -7px 7px 15px -7px rgba(0,0,0,0.22);
   }
 
   textarea{
