@@ -1,0 +1,14 @@
+body{
+    background-color: rgb(222, 219, 219);
+    display: flex;
+    justify-content: center;
+}
+
+main{
+    width: 600px;
+    background-color: white;
+}
+
+svg{
+    margin: 30px;
+}
