@@ -9,6 +9,19 @@ main{
     background-color: white;
 }
 
+header{
+    border-bottom: 1px solid rgb(201, 199, 199);
+}
+
 svg{
+    margin: 30px;
+}
+
+section{
+    display: flex;
+    justify-content: end;
+}
+
+button{
     margin: 30px;
 }
