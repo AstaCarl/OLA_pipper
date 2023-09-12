@@ -86,8 +86,9 @@ section{
     -moz-box-shadow: -7px 7px 15px -7px rgba(0,0,0,0.22);
   }
 .brugeravatar  {
-max-width: 10%;
-place-content: right;
+  display: flex;
+  max-width: 10%;
+  place-content: right;
 }
   textarea{
     width: 350px;
