@@ -9,33 +9,46 @@
 </head>
 <body> 
 
-     <!-- Load an icon library -->
+     <!-- Ikoner til vores sidebar -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <!-- The sidebar -->
+    <!-- Sidebar -->
     <div class="sidebar">
     <a href="#home"><i class="fa fa-fw fa-home"> </i> Home</a>
     <a href="#clients"><i class="fa fa-fw fa-user"></i> Profile</a>
 
+    <!--Knap til at oprette pip, som er placeret i vores sidebar-->
     <button id="myBtn">Opret PIP </button>
 
   </div> 
 
+ <!--Modal--> 
   <div id="myModal" class="modal">
     
-    <!-- Modal content -->
+    <!-- Modal indhold -->
     <div class="modal-content">
+
+     <!--Avatar-->
       <img class="brugeravatar"
       src="https://api.dicebear.com/7.x/adventurer/svg?seed=Patches"
       alt="avatar" />
+
+      <!--Luk knap til vores modal-->
       <span class="close">&times;</span>
+
+      <!--Tekst felt til vores brugernavn-->
       <input type="text" placeholder="Brugernavn" id="nameInput">
+      
+      <!--Tekstfelt til vores besked -->
       <textarea name="Besked" id="Message" placeholder="Pip-besked" cols="30" rows="10"></textarea>
+
+      <!--Vores submit knap-->
       <button onclick="displayMessage()">Submit</button>
     </div>
   </div>
 
   
+  <!--Template til vores pips-->
 
   <template id="template">
     <div>
@@ -44,6 +57,7 @@
       <div><p>pip</p></div>
     </div>
   </template>
+
   <script src="script.js"></script>
 </body>
 </html>
