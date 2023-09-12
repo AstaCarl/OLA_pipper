@@ -26,10 +26,10 @@
   <div id="myModal" class="modal">
     
     <!-- Modal indhold -->
-    <div class="modal-content">
+    <form class="modal-content">
 
      <!--Avatar-->
-      <img class="brugeravatar"
+      <img id="avatar" class="brugeravatar"
       src="https://api.dicebear.com/7.x/adventurer/svg?seed=Patches"
       alt="avatar" />
 
@@ -38,13 +38,13 @@
 
       <!--Tekst felt til vores brugernavn-->
       <input type="text" placeholder="Brugernavn" id="nameInput">
-      
+
       <!--Tekstfelt til vores besked -->
       <textarea name="Besked" id="Message" placeholder="Pip-besked" cols="30" rows="10"></textarea>
 
       <!--Vores submit knap-->
       <button onclick="displayMessage()">Submit</button>
-    </div>
+    </form>
   </div>
 
   
