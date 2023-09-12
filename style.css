@@ -5,27 +5,19 @@ body{
 }
 
 main{
-    width: 600px;
+    width: 800px;
     background-color: white;
 }
 
-header{
-    border-bottom: 1px solid rgb(201, 199, 199);
-}
-
-svg{
-    margin: 30px;
+li{
+  list-style: none;
+  padding: 20px;
 }
 
 section{
     display: flex;
     justify-content: end;
 }
-
-button{
-    margin: 30px;
-}
-
 
 
  /* The Modal (background) */
