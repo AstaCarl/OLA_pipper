@@ -5,7 +5,7 @@ $servername = "localhost";
 $username = "root";
 $password = getenv("PASSWORD");
 try {
-    $conn = new PDO("mysql:host=$servername;DBname", $username, $password);
+    $conn = new PDO("mysql:host=$servername;ola_pipper", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo"Connected successfully";
 } catch(PDOException $e) {
