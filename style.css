@@ -3,7 +3,17 @@ body{
     display: flex;
     justify-content: center;
 }
-
+/*
+Note fra timen i dag vi kan bruge - Monique
+avatar sådan gør vi
+- vi laver billedet i databasen, det er ikke det der er recommended, men det er det vi lære.
+- billederne bliver lavet til json format, png til base64
+- import image.helper.js
+-asynkronsk function,  husk await.
+-database column "imgUrl" og "imgToBase64" 
+-Imgtobase64 skal være tekst baseret
+- createflower koden, kan vi snuppe noget af koden fra.
+ */
 main{
     width: 800px;
     background-color: white;
@@ -80,7 +90,7 @@ section{
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: lightblue;
+    background-color: rgb(221, 228, 230);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
@@ -102,8 +112,11 @@ section{
   
   /* Close Button */
   .close {
+    display: flex;
+    justify-content: end;
+    margin-top: -20px;
+    margin-right: -10px;
     color: #aaa;
-    float: right;
     font-size: 28px;
     font-weight: bold;
   }
@@ -115,16 +128,32 @@ section{
     cursor: pointer;
   } 
 
+  .submit {
+ margin-left: 0;
+ border-radius: 10px;
+  }
 /* pip template styling */
 
 .pipTemplate{
-  background-color: white;
+  background-color:lightblue;
   width: 600px;
   padding: 30px;
   margin: 18px;
+  border-radius: 20px;
 }
 
 .bruger p{
   margin-top: 0px;
   font-weight: bold;
+}
+
+/*Knappen opret pip*/
+.opretpip{
+  border-radius: 10px;
+  background-color: white;
+}
+
+.opretpip:hover{
+  background-color: lightblue;
+  color: black;
 }
