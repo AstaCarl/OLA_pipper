@@ -46,3 +46,4 @@ textAreaElement.addEventListener("keyup", (event) => {
 //viser hvor mange anslag der er tastet
     typedCharactersElement.textContent = typedCharacters;
 });
+
