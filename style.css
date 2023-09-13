@@ -38,6 +38,9 @@ main{
 .sidebar a:hover {
   color: #f1f1f1;
 }
+.logo {
+  width: 10%;
+}
 
 /* Style the main content */
 .main {
