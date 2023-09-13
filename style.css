@@ -118,6 +118,10 @@ section{
     cursor: pointer;
   } 
 
+  .submit {
+ margin-left: 0;
+ border-radius: 10px;
+  }
 /* pip template styling */
 
 .pipTemplate{
