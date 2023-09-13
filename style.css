@@ -80,7 +80,7 @@ section{
   
   /* Modal Content/Box */
   .modal-content {
-    background-color: lightblue;
+    background-color: rgb(221, 228, 230);
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
@@ -118,22 +118,14 @@ section{
     cursor: pointer;
   } 
 
-/*Submit knappen*/
-.submit {
-  margin-left: 0;
-  border-radius: 10px;
-  background-color: white;
+  .submit {
+ margin-left: 0;
+ border-radius: 10px;
   }
-
-.submit:hover{
-    background-color: lightblue;
-    color: blue;
-  }
-
 /* pip template styling */
 
 .pipTemplate{
-  background-color: lightblue;
+  background-color:lightblue;
   width: 600px;
   padding: 30px;
   margin: 18px;
@@ -153,5 +145,5 @@ section{
 
 .opretpip:hover{
   background-color: lightblue;
-  color: blue;
+  color: black;
 }
