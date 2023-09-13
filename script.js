@@ -23,3 +23,26 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 } 
+
+// antal anslag tastet i text felt
+
+//Variabler for textarea, character-counter og antal anslag tæller elementer
+const textAreaElement = document.getElementById("message");
+const characterCounterElement = document.getElementById("character-counter");
+const typedCharactersElement = document.getElementById("typed-characters");
+
+//definerer maximun anslag for textfeltet
+const maximumCharacters = 255;
+
+//keyup eventlistener der lytter til hvilke taster der bliver trykket på
+textAreaElement.addEventListener("keyup", (event) => {
+
+//tæller de anslag der er tastet
+    const typedCharacters = textAreaElement.value.length;
+//if statement der checker for om der er brugt maximun anslag
+    if (typedCharacters > maximumCharacters) {
+        return false;
+    }
+//viser hvor mange anslag der er tastet
+    typedCharactersElement.textContent = typedCharacters;
+});

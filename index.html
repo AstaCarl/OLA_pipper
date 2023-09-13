@@ -27,10 +27,10 @@
   <div id="myModal" class="modal">
     
     <!-- Modal indhold -->
-    <div class="modal-content">
+    <form action="/public/index.php" method="POST" class="modal-content">
 
      <!--Avatar-->
-      <img class="brugeravatar"
+      <img id="avatar" class="brugeravatar"
       src="https://api.dicebear.com/7.x/adventurer/svg?seed=Patches"
       alt="avatar" />
 
@@ -38,26 +38,32 @@
       <span class="close">&times;</span>
 
       <!--Tekst felt til vores brugernavn-->
-      <input type="text" placeholder="Brugernavn" id="nameInput">
-      
+      <input name="brugernavn" type="text" placeholder="Brugernavn" id="nameInput">
+
       <!--Tekstfelt til vores besked -->
-      <textarea name="Besked" id="Message" placeholder="Pip-besked" cols="30" rows="10"></textarea>
+        <textarea name="pip" id="message" class="textarea" rows="10" placeholder="Pip besked" maxlength="255"></textarea>
+        <!-- anslags tæller med maximun -->
+            <div id="character-counter">
+                <span id="typed-characters">0</span>
+                <span>/</span>
+                <span id="maximum-characters">255</span>
+            </div>
 
       <!--Vores submit knap-->
-      <button onclick="displayMessage()">Submit</button>
-    </div>
+      <button type="submit" name="submit" onclick="displayMessage()">Submit</button>
+    </form>
   </div>
 
   
   <!--Template til vores pips-->
 
-  <template id="template">
-    <div>
+  <!-- <template id="template"> -->
+    <div class="pipTemplate">
       <div><img id="img" src=" " /></div>
-      <div><p>Brugernavn</p></div>
-      <div><p>pip</p></div>
+      <div class="bruger"><p>Brugernavn</p></div>
+      <div class="pip-besked"><p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, qui dolor tempora quisquam possimus magnam aspernatur reprehenderit saepe voluptatem magni sed tenetur dolorem voluptas deserunt similique recusandae dolore obcaecati commodi vero impedit reiciendis numquam hic nam! Provident molestias reiciendis corrupti? Obcaecati fuga ipsum quaerat et doloribus possimus sapiente adipisci, suscipit expedita soluta sunt commodi porro hic doloremque architecto libero mollitia, temporibus repellendus numquam aperiam quo a ex exercitationem. Aspernatur eveniet distinctio, optio deserunt alias sed omnis vero maxime. Inventore labore veritatis adipisci, autem facilis ad fuga ipsa quo illum voluptates iusto. Eius ad consequatur eligendi praesentium dolores, autem laborum maxime!</p></div>
     </div>
-  </template>
+  <!-- </template> -->
 
   <script src="script.js"></script>
 </body>
