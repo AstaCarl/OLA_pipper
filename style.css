@@ -3,7 +3,15 @@ body{
     display: flex;
     justify-content: center;
 }
-
+/*
+avatar sådan gør vi
+- vi laver billedet i databasen, det er ikke det der er recommended, men det er det vi lære.
+- billederne bliver lavet til json format, png til base64
+- import image.helper.js
+-asynkronsk function,  husk await.
+-database column "imgUrl" og "imgToBase64" 
+-Imgtobase64 skal være tekst baseret
+ */
 main{
     width: 800px;
     background-color: white;
