@@ -51,9 +51,10 @@ main{
   .sidebar a {font-size: 18px;}
 }
 
-li{
-  list-style: none;
-  padding: 20px;
+button{
+  margin: 6px 8px 0px 16px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
 }
 
 section{
@@ -65,9 +66,9 @@ section{
  /* Modal (baggrund) */
  .modal {
     display: none; /* Hidden by default */
-    position: relative;
+    position: absolute;
     z-index: 1; /* Sit on top */
-    left: 0;
+    left: 100;
     top: 0;
     width: 600px;
     height: fit-content; /* Full height */
@@ -92,6 +93,7 @@ section{
 }
   textarea{
     width: 350px;
+    margin-top: 15px;
   }
 
   
@@ -109,3 +111,17 @@ section{
     text-decoration: none;
     cursor: pointer;
   } 
+
+/* pip template styling */
+
+.pipTemplate{
+  background-color: white;
+  width: 600px;
+  padding: 30px;
+  margin: 18px;
+}
+
+.bruger p{
+  margin-top: 0px;
+  font-weight: bold;
+}
