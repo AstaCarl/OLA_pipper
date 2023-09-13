@@ -4,6 +4,7 @@ body{
     justify-content: center;
 }
 /*
+Note fra timen i dag vi kan bruge - Monique
 avatar sådan gør vi
 - vi laver billedet i databasen, det er ikke det der er recommended, men det er det vi lære.
 - billederne bliver lavet til json format, png til base64
@@ -11,6 +12,7 @@ avatar sådan gør vi
 -asynkronsk function,  husk await.
 -database column "imgUrl" og "imgToBase64" 
 -Imgtobase64 skal være tekst baseret
+- createflower koden, kan vi snuppe noget af koden fra.
  */
 main{
     width: 800px;
