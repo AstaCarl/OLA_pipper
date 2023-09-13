@@ -136,10 +136,10 @@ section{
 /*Knappen opret pip*/
 .opretpip{
   border-radius: 10px;
-  background-color: lightblue;
+  background-color: white;
 }
 
 .opretpip:hover{
-  background-color: lightgray;
+  background-color: lightblue;
   color: black;
 }
