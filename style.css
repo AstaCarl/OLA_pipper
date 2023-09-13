@@ -121,13 +121,25 @@ section{
 /* pip template styling */
 
 .pipTemplate{
-  background-color: white;
+  background-color: lightblue;
   width: 600px;
   padding: 30px;
   margin: 18px;
+  border-radius: 20px;
 }
 
 .bruger p{
   margin-top: 0px;
   font-weight: bold;
+}
+
+/*Knappen opret pip*/
+.opretpip{
+  border-radius: 10px;
+  background-color: lightblue;
+}
+
+.opretpip:hover{
+  background-color: lightgray;
+  color: black;
 }
