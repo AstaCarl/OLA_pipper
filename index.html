@@ -8,6 +8,7 @@
         <!-- Ikoner til vores sidebar -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="script.js" defer type = "module"></script>
+        <script src="form-test.js" defer></script>
 </head>
 <body> 
 
@@ -21,17 +22,7 @@
     <button class="opretpip" id="myBtn">Opret PIP </button>
 
   </div> 
-   <!-- oprettelse af avatar -->
-<main id="main-content"></main>
-<div>
-  <form id="create-avatar">
-    <h2>choose avatar:</h2>
-    <label for="new-avatar">Image</label>
-    <input type="file" id="avatar-image" name="image" />
 
-    <input type="submit" value="Create" />
-  </form>
-</div>
  <!--Modal--> 
   <div id="myModal" class="modal">
     
@@ -57,7 +48,18 @@
                 <span>/</span>
                 <span id="maximum-characters">255</span>
             </div>
+   <!-- oprettelse af avatar -->
 
+   <div>
+    <form id="create-avatar">
+      <h2>choose avatar:</h2>
+  
+      <label for="new-avatar">Image</label>
+      <input type="file" id="avatar-image" name="image" />
+  
+      <input type="submit" value="Create" />
+    </form>
+  </div>
       <!--Vores submit knap-->
       <button class="submit" type="submit"  name="submit" onclick="displayMessage()">Submit</button>
     </form>
