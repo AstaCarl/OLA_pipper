@@ -52,6 +52,8 @@ textAreaElement.addEventListener("keyup", (event) => {
 });
 
 import { imageToBase64 } from "./image-helpers.js";
+import { fetchPips, postPip } from "./pip-api.js";
+import { createAvatar } from "./create-avatar.js";
 
 const form = document.getElementById("form");
 
@@ -82,10 +84,10 @@ form.addEventListener("submit", async (event) => {
 });
 
 async function load() {
-  const body = await fetchFlowers();
+  const body = await fetchPips();
 
   body.forEach((x) => {
-    createFlower(x);
+    createAvatar(x);
   });
 }
 
