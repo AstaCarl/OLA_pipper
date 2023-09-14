@@ -60,6 +60,7 @@ require ".env";
 $brugernavn = $_POST["brugernavn"];
 $pip = $_POST["pip"];
 
+
 $host = "localhost";
 $dbname = "ola_pipper";
 $username = "root";
@@ -80,11 +81,11 @@ if (!mysqli_stmt_prepare($stmt, $sql)) {
 
 mysqli_stmt_bind_param($stmt, "ss", $brugernavn, $pip);
 
-if (mysqli_stmt_execute($stmt)) {
-    echo "Record has been saved"; 
-} else {
-    die("Error: " . mysqli_error($conn));
-}
+// if (mysqli_stmt_execute($stmt)) {
+//     echo "Record has been saved"; 
+// } else {
+//     die("Error: " . mysqli_error($conn));
+// }
 
 mysqli_stmt_close($stmt);
 mysqli_close($conn);
