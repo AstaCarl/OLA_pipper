@@ -1,3 +1,7 @@
+ /*
+ 
+ import { imageToBase64 } from "./image-helpers";*/ 
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -46,4 +50,5 @@ textAreaElement.addEventListener("keyup", (event) => {
 //viser hvor mange anslag der er tastet
     typedCharactersElement.textContent = typedCharacters;
 });
+
 
