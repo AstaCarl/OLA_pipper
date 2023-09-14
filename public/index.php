@@ -88,7 +88,7 @@ mysqli_stmt_bind_param($stmt, "ss", $brugernavn, $pip);
 // }
 
 mysqli_stmt_close($stmt);
-mysqli_close($conn);
+mysqli_close($conn); 
 
 
 ?>
