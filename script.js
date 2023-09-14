@@ -75,9 +75,10 @@ form.addEventListener("submit", async (event) => {
   console.log(base64);
 
   const newPip = {
-    name: name,
+    brugernavn: name,
     pip: pip,
-    img_base64: base64,
+    imgToBase64: base64,
+    imgUrl: ""
   };
 
   const x = postPip(newPip);

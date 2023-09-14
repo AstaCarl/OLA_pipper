@@ -21,6 +21,11 @@ $username = "root";
 $password = getenv("PASSWORD"); // reads from the .env file (if imported in index.php)
 
 try {
+
+    //$name = isset($_POST['brugernavn']);
+    //$pip = isset($_POST['pip']);
+    //$img = isset($_POST['imgToBase64']);
+
     $conn = new PDO("mysql:host=$servername;dbname=ola_pipper", $username, $password);
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -33,21 +38,25 @@ try {
         } else if ($requestMethod == "POST") {
             $input = (array) json_decode(file_get_contents('php://input'), TRUE);
 
-            $data = [
+            $data = array(
                 'brugernavn' => $input['brugernavn'],
-                'pip' => $input['pip']
-           ];
+                'pip' => $input['pip'],
+                'imgToBase64' => $input['imgToBase64'],
+                'imgUrl' => $input['imgUrl']
+            );
 
-            $sql = 'INSERT INTO pipper VALUES(default, :brugernavn, :pip)';
+            $sql = "INSERT INTO pipper (brugernavn, pip, imgToBase64, imgUrl) VALUES (:brugernavn, :pip, :imgToBase64, :imgUrl)";
+            //VALUES(default, :brugernavn, :pip)'
             $statement = $conn->prepare($sql);
             $statement->execute($data);
+            //$statement->execute($data);
+            // 
 
             $id = $conn->lastInsertId();
             $pip = (object) $input;
             $pip->id = $id;
 
             echo json_encode($pip);
-            echo "You sent a POST request, so you get no data, hahaha!";
         }
     }
     
@@ -57,6 +66,7 @@ try {
 }
             
         
+ 
 
 
 // $brugernavn = $_POST["brugernavn"];
