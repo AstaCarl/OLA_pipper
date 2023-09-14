@@ -5,7 +5,7 @@
     header("Content-Type: application/json; charset=UTF-8"); 
     header("Access-Control-Allow-Methods: OPTIONS,GET,POST,PUT,DELETE"); 
     header("Access-Control-Max-Age: 3600"); 
-    header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+    header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"); 
     
 //impoterer .env filen 
 require ".env";
@@ -51,11 +51,13 @@ try {
         }
     }
     
-    
 // hvis forbindelsen til databasen fejler sendes der beskeden "connection failed"  
 } catch(PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
+            
+        
+
 
 // $brugernavn = $_POST["brugernavn"];
 // $pip = $_POST["pip"];

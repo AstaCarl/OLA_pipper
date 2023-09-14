@@ -27,21 +27,20 @@
   <div id="myModal" class="modal">
     
     <!-- Modal indhold -->
-    <form action="public/index.php" method="post" class="modal-content">
-
-     <!--Avatar-->
-      <!-- <img id="avatar" class="brugeravatar"
-      src="https://api.dicebear.com/7.x/adventurer/svg?seed=Patches"
-      alt="avatar" /> -->
+    <form class="modal-content" id="form">
 
       <!--Luk knap til vores modal-->
       <span class="close">&times;</span>
 
-      <!--Tekst felt til vores brugernavn-->
-      <input name="brugernavn" type="text" placeholder="Brugernavn" id="nameInput">
+        <label for="brugernavn"></label>
+        <input type="text" id="nameInput" placeholder="Brugernavn" name="brugernavn" />
 
-      <!--Tekstfelt til vores besked -->
+        <label for="pip"></label>
         <textarea name="pip" id="message" class="textarea" rows="10" placeholder="Pip besked" maxlength="255"></textarea>
+
+        <label for="img">Image</label>
+        <input type="file" id="avatar-image" name="img" />
+
         <!-- anslags tæller med maximun -->
             <div id="character-counter">
                 <span id="typed-characters">0</span>
@@ -52,6 +51,8 @@
       <!--Vores submit knap-->
       <button class="submit" type="submit"  name="submit" onclick="displayMessage()">Submit</button>
     </form>
+
+    <!-- form slut! -->
   </div>
 
   

@@ -51,4 +51,44 @@ textAreaElement.addEventListener("keyup", (event) => {
     typedCharactersElement.textContent = typedCharacters;
 });
 
+import { imageToBase64 } from "./image-helpers.js";
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit", async (event) => {
+  console.log("Hello from Form");
+  event.preventDefault();
+  const data = new FormData(form);
+
+  const name = data.get("brugernavn");
+  console.log(name);
+
+  const pip = data.get("pip");
+  console.log(pip);
+
+  const image = data.get("img");
+  console.log(image);
+
+  const base64 = await imageToBase64(image);
+  console.log(base64);
+
+  const newPip = {
+    name: name,
+    pip: pip,
+    img_base64: base64,
+  };
+
+  const x = postPip(newPip);
+});
+
+async function load() {
+  const body = await fetchFlowers();
+
+  body.forEach((x) => {
+    createFlower(x);
+  });
+}
+
+
+load();
 
