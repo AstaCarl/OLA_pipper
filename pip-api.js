@@ -14,6 +14,7 @@ export async function postPip(data) {
   console.log("data", data);
   const response = await fetch(URL, {
     method: "POST",
+    //data skal oversættes til JSON format (string)
     body: JSON.stringify(data),
   });
   console.log(response);

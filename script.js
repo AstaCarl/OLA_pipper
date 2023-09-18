@@ -1,27 +1,20 @@
- /*
- 
- import { imageToBase64 } from "./image-helpers";*/ 
+//variabler for modal, knap og luk knap
 
-// Get the modal
 var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
 var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
+// klik på opret pip, åbner modal
 btn.onclick = function() {
   modal.style.display = "block";
 }
 
-// When the user clicks on <span> (x), close the modal
+// når man klikker på X lukker modal
 span.onclick = function() {
   modal.style.display = "none";
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// når man klikker udenfor modal lukker den
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
@@ -51,12 +44,15 @@ textAreaElement.addEventListener("keyup", (event) => {
     typedCharactersElement.textContent = typedCharacters;
 });
 
+//importerer script moduler og funktioner
 import { imageToBase64 } from "./image-helpers.js";
 import { fetchPips, postPip } from "./pip-api.js";
 import { createAvatar } from "./create-avatar.js";
 
 const form = document.getElementById("form");
 
+
+//eventlister på submit knappen og sørger for den ikke reloader siden
 form.addEventListener("submit", async (event) => {
   console.log("Hello from Form");
   event.preventDefault();
@@ -74,6 +70,7 @@ form.addEventListener("submit", async (event) => {
   const base64 = await imageToBase64(image);
   console.log(base64);
 
+ // Nyt pip objekt, med brugernavn, pip og billede 
   const newPip = {
     brugernavn: name,
     pip: pip,
@@ -91,7 +88,6 @@ async function load() {
     createAvatar(x);
   });
 }
-
 
 load();
 

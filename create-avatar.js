@@ -9,7 +9,6 @@ export function createAvatar(x) {
 
    fillImage(clone, x);
    fillBrugernavn(clone, x);
-  //  fillP(clone, x);
    fillPip(clone, x);
  
    // Sætter den udfyldte kopi ind på hjemmesiden
@@ -24,11 +23,6 @@ export function createAvatar(x) {
    const clone = document.importNode(template.content, true);
    return clone;
  }
-
-
- /*   kode skal modiceres*/ 
-
- 
   
   function fillImage(clone, x) {
     console.log(x);
@@ -52,12 +46,6 @@ export function createAvatar(x) {
     // const cloneP = clone.getElementById("amount");
     brugernavnClone.id = "brugernavn-" + x.id;
   
-    // minusClone.addEventListener("click", () => {
-    //   if (Number(cloneP.innerText)) {
-    //     cloneP.innerText = Number(cloneP.innerText) - 1;
-    //     // TODO : Subtract 250kr from total
-    //   }
-    // });
   }
   
   function fillPip(clone, x) {
