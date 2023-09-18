@@ -84,8 +84,8 @@ form.addEventListener("submit", async (event) => {
 async function load() {
   const body = await fetchPips();
 
-  body.forEach((x) => {
-    createAvatar(x);
+  body.forEach((newPip) => {
+    createAvatar(img);
   });
 }
 
