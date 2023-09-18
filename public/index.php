@@ -22,9 +22,7 @@ $password = getenv("PASSWORD"); // reads from the .env file (if imported in inde
 
 try {
 
-    //$name = isset($_POST['brugernavn']);
-    //$pip = isset($_POST['pip']);
-    //$img = isset($_POST['imgToBase64']);
+
 
     $conn = new PDO("mysql:host=$servername;dbname=ola_pipper", $username, $password);
     // set the PDO error mode to exception
@@ -66,41 +64,6 @@ try {
 }
             
         
- 
-
-
-// $brugernavn = $_POST["brugernavn"];
-// $pip = $_POST["pip"];
-
-
-// $host = "localhost";
-// $dbname = "ola_pipper";
-// $username = "root";
-// $password = getenv("PASSWORD");
-
-// $conn = mysqli_connect($host, $username, $password, $dbname);
-
-// if (mysqli_connect_errno()) {
-//     die("Connection error: " . mysqli_connect_error()); 
-// } 
-
-// $sql = "INSERT INTO pipper (brugernavn, pip) VALUES (?, ?)";
-// $stmt = mysqli_stmt_init($conn);
-
-// if (!mysqli_stmt_prepare($stmt, $sql)) {
-//     die("SQL error: " . mysqli_error($conn));
-// }
-
-// mysqli_stmt_bind_param($stmt, "ss", $brugernavn, $pip);
-
-// if (mysqli_stmt_execute($stmt)) {
-//     echo "Record has been saved"; 
-// } else {
-//     die("Error: " . mysqli_error($conn));
-// }
-
-// mysqli_stmt_close($stmt);
-// mysqli_close($conn); 
 
 
 ?>
